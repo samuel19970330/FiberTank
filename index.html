@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio en Construcción | FiberTank.com.co</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Specific overrides for the construction page to ensure perfect centering and focus */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .construction-hero {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: url('assets/images/principal.png') center/cover no-repeat;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .construction-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            border-top: 5px solid var(--color-secondary);
+        }
+
+        .construction-logo {
+            max-width: 200px;
+            margin-bottom: 2rem;
+            height: auto;
+        }
+
+        .construction-title {
+            color: var(--color-primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .construction-text {
+            color: var(--color-text-main);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .construction-url {
+            display: inline-block;
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: var(--transition-fast);
+            box-shadow: 0 4px 15px rgba(0, 80, 157, 0.3);
+        }
+
+        .construction-url:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 80, 157, 0.4);
+            background: var(--color-primary-dark);
+            color: var(--color-white);
+        }
+
+        .icon-construction {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <main>
+        <section class="construction-hero">
+            <div class="hero__bg-overlay"></div>
+
+            <div class="construction-card anime-fade-up">
+                <span class="icon-construction">🚧</span>
+                <h1 class="construction-title">Sitio en Construcción</h1>
+                <p class="construction-text">Estamos trabajando arduamente para renovar nuestra plataforma y brindarte
+                    una mejor experiencia en tanques de fibra de vidrio.</p>
+
+                <p style="margin-bottom: 1rem; font-weight: 600; color: var(--color-text-light);">Visítanos pronto en:
+                </p>
+                <a href="https://www.fibertank.com.co" class="construction-url">www.fibertank.com.co</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom text-center">
+                <p>&copy; 2026 FiberTank.com.co. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

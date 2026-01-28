@@ -214,4 +214,89 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         });
     }
+
+    // --- Carousel for Raw Materials Section ---
+    const carouselTrack = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicators = document.querySelectorAll('.carousel__indicator');
+
+    if (carouselTrack && prevBtn && nextBtn) {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel__slide');
+        const totalSlides = slides.length;
+        let autoRotateInterval;
+
+        // Function to update carousel position
+        function updateCarousel() {
+            const offset = -currentSlide * 100;
+            carouselTrack.style.transform = `translateX(${offset}%)`;
+
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                if (index === currentSlide) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+
+        // Next slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        // Previous slide
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        // Event listeners for navigation buttons
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoRotate();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoRotate();
+        });
+
+        // Event listeners for indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+                resetAutoRotate();
+            });
+        });
+
+        // Auto-rotate carousel every 5 seconds
+        function startAutoRotate() {
+            autoRotateInterval = setInterval(nextSlide, 5000);
+        }
+
+        function resetAutoRotate() {
+            clearInterval(autoRotateInterval);
+            startAutoRotate();
+        }
+
+        // Start auto-rotation
+        startAutoRotate();
+
+        // Pause auto-rotation when hovering over carousel
+        const carousel = document.getElementById('materialsCarousel');
+        if (carousel) {
+            carousel.addEventListener('mouseenter', () => {
+                clearInterval(autoRotateInterval);
+            });
+
+            carousel.addEventListener('mouseleave', () => {
+                startAutoRotate();
+            });
+        }
+    }
 });

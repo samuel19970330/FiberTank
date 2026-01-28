@@ -259,6 +259,11 @@ ul {
 .about__image img {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
+    max-width: 100%;
+    max-height: 450px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .list-check {
@@ -447,13 +452,21 @@ ul {
 
 /* Contact */
 .contact__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     gap: var(--spacing-xl);
+}
+
+.contact__info {
+    max-width: 600px;
+    text-align: center;
 }
 
 .contact__list {
     margin-top: 2rem;
+    text-align: left;
+    display: inline-block;
 }
 
 .contact__list li {
@@ -824,5 +837,151 @@ ul {
 
     .modal__info-col {
         padding: 1.5rem;
+    }
+}
+
+/* Raw Materials Section */
+.raw-materials {
+    background: linear-gradient(135deg, var(--color-bg-light) 0%, #ffffff 100%);
+    padding: var(--spacing-xl) 0;
+}
+
+.carousel {
+    position: relative;
+    max-width: 1400px;
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border: 3px solid var(--color-secondary);
+}
+
+.carousel__track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel__slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel__image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 80, 157, 0.95), rgba(0, 80, 157, 0.7), transparent);
+    color: var(--color-white);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.carousel__caption h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+}
+
+.carousel__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--color-primary);
+    transition: var(--transition-fast);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.carousel__nav:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 8px 20px rgba(0, 80, 157, 0.4);
+}
+
+.carousel__nav--prev {
+    left: 30px;
+}
+
+.carousel__nav--next {
+    right: 30px;
+}
+
+.carousel__indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel__indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.carousel__indicator.active {
+    background: var(--color-white);
+    transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 98%;
+        border-width: 2px;
+    }
+
+    .carousel__image {
+        height: 400px;
+    }
+
+    .carousel__caption {
+        padding: 2rem 1rem;
+    }
+
+    .carousel__caption h3 {
+        font-size: 1.5rem;
+    }
+
+    .carousel__nav {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+
+    .carousel__nav--prev {
+        left: 15px;
+    }
+
+    .carousel__nav--next {
+        right: 15px;
     }
 }

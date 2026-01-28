@@ -200,7 +200,7 @@ ul {
     min-height: 600px;
     display: flex;
     align-items: center;
-    background: url('../assets/images/principal.png') center/cover no-repeat;
+    background: url('../assets/images/principal.jpeg') center/cover no-repeat;
     /* Fallback or styling */
     background-color: #f0f4f8;
     /* Fallback color */

@@ -24,13 +24,16 @@
     <meta property="og:title" content="FiberTank Colombia | Tanques y Materia Prima en Fibra de Vidrio">
     <meta property="og:description"
         content="Fabricación de tanques y venta de materia prima en fibra de vidrio. Resina, fibra, catalizador y más. Medellín, Colombia.">
-    <meta property="og:image" content="https://www.fibertank.com.co/assets/images/principal.png">
+    <meta property="og:image" content="https://www.fibertank.com.co/assets/images/principal.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FiberTank Colombia - Fibra de Vidrio">
     <meta name="twitter:description" content="Tanques y materia prima en fibra de vidrio. Calidad garantizada.">
-    <meta name="twitter:image" content="https://www.fibertank.com.co/assets/images/principal.png">
+    <meta name="twitter:image" content="https://www.fibertank.com.co/assets/images/principal.jpeg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/Logo.png">
@@ -138,10 +141,10 @@
                     <li class="nav__item"><a href="#contacto" class="nav__link btn btn--primary-outline">Cotizar</a>
                     </li>
                 </ul>
-                <button class="nav__toggle" aria-label="Abrir menú">
-                    <span class="hamburger"></span>
-                </button>
             </nav>
+            <button class="nav__toggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
         </div>
     </header>
 
@@ -593,11 +596,11 @@
                         </li>
                         <li>
                             <strong>📞 Teléfono:</strong><br>
-                            <a href="tel:+573001234567">+57 300 123 4567</a>
+                            <a href="tel:+573045679061">+57 3045679061</a>
                         </li>
                         <li>
                             <strong>📧 Email:</strong><br>
-                            ventas@fibratanquescolombia.com
+                            jhenaosanchez92@gmail.com
                         </li>
                     </ul>
                 </div>
@@ -663,6 +666,17 @@
     </div>
 
     <!-- Scripts -->
+    <!-- Clean URL for sharing -->
+    <script>
+        // Update Open Graph URL to always be the base URL without hash
+        document.addEventListener('DOMContentLoaded', function () {
+            const cleanUrl = window.location.origin + window.location.pathname;
+            const ogUrl = document.querySelector('meta[property="og:url"]');
+            if (ogUrl) {
+                ogUrl.setAttribute('content', cleanUrl);
+            }
+        });
+    </script>
     <!-- Anime.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="js/script.js"></script>

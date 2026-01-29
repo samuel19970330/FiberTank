@@ -80,6 +80,10 @@ ul {
     color: var(--color-secondary);
 }
 
+.text-white {
+    color: var(--color-white) !important;
+}
+
 .width-100 {
     width: 100%;
 }

@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
     <!-- SEO Meta Tags -->
     <title>FiberTank Colombia | Tanques y Materia Prima en Fibra de Vidrio</title>
     <meta name="description"
@@ -125,6 +134,16 @@
 </head>
 
 <body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
 
     <header class="header" id="header">
         <div class="container header__container">
@@ -494,7 +513,43 @@
                                 <a href="#contacto" class="btn btn--small btn--primary width-100">Solicitar Precio</a>
                             </div>
                         </div>
-                    </article>
+        </section>
+
+        <!-- Custom Solutions Section -->
+        <section class="section custom-solutions">
+            <div class="container">
+                <div class="custom-solutions__content anime-on-scroll">
+                    <svg class="icon-lightbulb" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path
+                            d="M9 18h6M10 22h4M15 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM12 3v1M18.36 5.64l-.7.7M21 12h-1M18.36 18.36l-.7-.7M5.64 5.64l.7.7M3 12h1M5.64 18.36l.7-.7" />
+                    </svg>
+                    <h2 class="custom-solutions__title">¿Tienes un proyecto específico en mente?</h2>
+                    <p class="custom-solutions__text">
+                        Nuestro catálogo es solo el comienzo. Trabajamos con todo tipo de proyectos en fibra de vidrio,
+                        desde diseños personalizados hasta soluciones industriales a medida. Si puedes imaginarlo,
+                        nosotros podemos fabricarlo.
+                    </p>
+                    <a href="#contacto" class="btn btn--primary custom-solutions__btn">Consulta tu Proyecto</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="section stats">
+            <div class="container">
+                <div class="stats__grid">
+                    <div class="stat-item anime-on-scroll">
+                        <div class="stat-item__number" data-target="500">0</div>
+                        <div class="stat-item__label">Proyectos Completados</div>
+                    </div>
+                    <div class="stat-item anime-on-scroll">
+                        <div class="stat-item__number" data-target="15">0</div>
+                        <div class="stat-item__label">Años de Experiencia</div>
+                    </div>
+                    <div class="stat-item anime-on-scroll">
+                        <div class="stat-item__number" data-target="98">0</div>
+                        <div class="stat-item__label">% Clientes Satisfechos</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -505,22 +560,31 @@
                 <h2 class="section__title text-center text-white">¿Por qué elegir Fibra de Vidrio?</h2>
                 <div class="benefits__grid">
                     <div class="benefit-item anime-on-scroll">
-                        <div class="benefit-item__icon">🛡️</div>
+                        <svg class="benefit-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
                         <h3>Alta Durabilidad</h3>
                         <p>Vida útil superior a 30 años sin corrosión ni óxido.</p>
                     </div>
                     <div class="benefit-item anime-on-scroll">
-                        <div class="benefit-item__icon">⚖️</div>
+                        <svg class="benefit-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 3v18M3 12h18M7 7l5-5 5 5M7 17l5 5 5-5" />
+                        </svg>
                         <h3>Peso Ligero</h3>
                         <p>Fácil transporte e instalación comparado con concreto o acero.</p>
                     </div>
                     <div class="benefit-item anime-on-scroll">
-                        <div class="benefit-item__icon">🔧</div>
+                        <svg class="benefit-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
                         <h3>Bajo Mantenimiento</h3>
                         <p>Superficies lisas que evitan adherencias y facilitan la limpieza.</p>
                     </div>
                     <div class="benefit-item anime-on-scroll">
-                        <div class="benefit-item__icon">💧</div>
+                        <svg class="benefit-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                        </svg>
                         <h3>100% Higiénicos</h3>
                         <p>No altera el olor ni sabor del agua. Grado alimenticio.</p>
                     </div>
@@ -616,7 +680,7 @@
     <footer class="footer">
         <div class="container footer__container">
             <div class="footer__col">
-                <img src="assets/images/Logo.png" alt="Logo FibraTanques" class="footer__logo" width="120">
+                <img src="assets/images/Logo.png" alt="Logo FiberTank" class="footer__logo" width="120">
                 <p>Expertos en soluciones de fibra de vidrio para Colombia.</p>
             </div>
             <div class="footer__col">
@@ -682,8 +746,10 @@
             }
         });
     </script>
-    <!-- Anime.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Anime.js CDN with SRI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
 </body>
 
